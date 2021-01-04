@@ -22,21 +22,22 @@ export default class Profile extends React.Component{
 
     <View style={styles.profileview}>
 
-          {/* <Image
-          styles={{height:10, width:10}}
+          <Image
+          style={{height:150, width:150, borderRadius:100}}
           source={require('../images/profile.jpeg')}
           resizeMode='cover'
-          /> */}
+          
+          />
     </View>
 
     <View style={styles.mainview}>
           <View style={{
             justifyContent:'center',
             alignItems:'center',
-            padding:25,
+            padding:70,
           }}>
-          <Text>Joseph Dumba</Text>
-          <Text>0771070274</Text>
+          <Text style={{fontSize:20, fontWeight:'600', fontFamily:'Verdana'}}>Joseph Dumba</Text>
+          <Text style={{marginTop:10, fontSize:17}}>0771070274</Text>
           </View>
 
           <View style={styles.qrcode}>
@@ -117,8 +118,9 @@ const styles = StyleSheet.create({
   height:'50%',
   width: '80%',
   alignSelf:'center',
-  marginTop:-20,
+  marginTop:-50,
   borderRadius:50,
+  opacity:0.6,
  },
 
  qrcode:{
