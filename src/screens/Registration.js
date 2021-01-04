@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, TextInput, TouchableOpacity, ImageBackground} from 'react-native';
+import {View, Text, StyleSheet, TextInput, TouchableOpacity, ImageBackground, Image} from 'react-native';
 
 export default class Registration extends React.Component{
   render(){
@@ -9,9 +9,15 @@ export default class Registration extends React.Component{
     source={require('../images/bg.png')}
     style={{flex:1, backgroundColor:'#fff'}}>
       <View style={styles.container}>
-      <View style={styles.logo}></View>
+      <View style={styles.logo}>
+
+        <Image
+        style={{height:70, width:70}}
+        resizeMode='cover'
+        source={require('../images/applogo.png')}/>
+      </View>
     <View>
-      <Text>Zpay</Text>
+      <Text style={{color:'#D7F5B0', fontFamily:'Verdana', fontSize:30}}>Zpay</Text>
     </View>
   </View>
 
@@ -62,7 +68,7 @@ const styles = StyleSheet.create({
  },
 
  logo:{
-  backgroundColor:'lightskyblue', 
+  backgroundColor:'transparent', 
   height:70, 
   width:70
  },

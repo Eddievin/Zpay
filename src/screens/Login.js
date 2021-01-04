@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, TextInput, TouchableOpacity, Button, ImageBackground} from 'react-native';
+import {View, Text, StyleSheet, TextInput, Image, TouchableOpacity, Button, ImageBackground} from 'react-native';
 
 
 export default class Login extends React.Component{
@@ -11,7 +11,12 @@ export default class Login extends React.Component{
     style={styles.container}>
       
     <View style={styles.logo}>
+    <Image
+        style={{height:200, width:200}}
+        resizeMode='cover'
+        source={require('../images/applogo.png')}/>
     </View>
+    <Text style={{alignSelf:'center', fontSize:30, fontWeight:'500', fontFamily:'Verdana', color:'#D7F5B0'}}>Zpay</Text>
 
     <View style={styles.mainview}>
          
@@ -52,11 +57,13 @@ const styles = StyleSheet.create({
  },
  
  logo:{
-  backgroundColor:'lightgray',
+  backgroundColor:'transparent',
   height:'20%',
   width: '50%',
   alignSelf:'center',
   marginTop:50,
+  justifyContent:'center',
+  alignItems:'center',
 
  },
 
